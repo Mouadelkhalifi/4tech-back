@@ -1,7 +1,4 @@
 # Fichiers de configuration spécifiques à l'environnement
-.env
-.env.local
-.env.*.local
 
 # Dossiers de dépendances
 /vendor/
