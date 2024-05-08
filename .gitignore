@@ -1,0 +1,63 @@
+# Fichiers de configuration spécifiques à l'environnement
+.env
+.env.local
+.env.*.local
+
+# Dossiers de dépendances
+/vendor/
+/node_modules/
+
+# Dossiers de cache et de logs (Symfony)
+/var/cache/
+/var/log/
+/var/sessions/
+
+# Fichiers et dossiers de build
+/public/build/
+/public/bundles/
+
+# Dossiers générés par les IDE et éditeurs
+/.idea/
+/.vscode/
+*~
+*.swp
+
+# Fichiers spécifiques aux tests
+/phpunit.xml
+/phpunit.xml.dist
+
+# Autres fichiers temporaires ou sensibles
+/config/secrets/prod/
+/config/secrets/dev/
+/config/secrets/test/
+
+# Fichiers de sortie de Composer
+composer.lock
+composer.phar
+
+# Fichiers de sortie de Node
+package-lock.json
+yarn.lock
+.npm/
+
+# Fichiers spécifiques au déploiement
+/deployments/
+
+# Fichiers de cache et de sessions
+/sessions
+/cache/*
+
+# Fichiers de log
+*.log
+log.txt
+
+# Fichiers de données SQLite
+*.sqlite
+*.sqlite3
+
+# Thumbnails Mac OS X
+.DS_Store
+
+# Thumbnails Windows
+Thumbs.db
+

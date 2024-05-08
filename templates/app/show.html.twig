@@ -1,0 +1,25 @@
+{# templates/app/vehicle_show.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Vehicle Details{% endblock %}
+
+{% block body %}
+    <h1>Vehicle Details</h1>
+    <div>
+        <h2>{{ vehicle.brand }} {{ vehicle.model }} - {{ vehicle.version }}</h2>
+        <p>Year: {{ vehicle.year }}</p>
+        <p>Energy: {{ vehicle.energy }}</p>
+        <p>Power: {{ vehicle.power }} HP</p>
+        <p>Price: €{{ vehicle.price }}</p>
+        <p>Retail Price: €{{ vehicle.priceRetail }}</p>
+        <p>Monthly Price: €{{ vehicle.priceMonthly }}</p>
+        <p>Gearbox: {{ vehicle.gearbox }}</p>
+        <div>
+            <h3>Photos:</h3>
+            {% for pic in vehicle.pics %}
+                <img src="{{ pic }}" alt="Vehicle photo">
+            {% endfor %}
+        </div>
+    </div>
+    <a href="{{ path('app_vehicles_list') }}">Return to vehicle list</a>
+{% endblock %}

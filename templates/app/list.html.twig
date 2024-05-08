@@ -1,0 +1,33 @@
+{# templates/app/vehicles_list.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}List of Vehicles{% endblock %}
+
+{% block body %}
+    <h1>List of Vehicles</h1>
+    <ul>
+        {% for vehicle in vehicles %}
+            <div>
+                <h2>{{ vehicle.brand }} {{ vehicle.model }} - {{ vehicle.version }}</h2>
+                <p>Year: {{ vehicle.year }}</p>
+                <p>Energy: {{ vehicle.energy }}</p>
+                <p>Power: {{ vehicle.power }} HP</p>
+                <p>Price: €{{ vehicle.price }}</p>
+                <p>Retail Price: €{{ vehicle.priceRetail }}</p>
+                <p>Monthly Price: €{{ vehicle.priceMonthly }}</p>
+                <p>Gearbox: {{ vehicle.gearbox }}</p>
+
+                <div>
+                    <h3>Photos:</h3>
+                    {% for pic in vehicle.pics %}
+                        <img src="{{ pic }}" alt="Vehicle photo">
+                    {% endfor %}
+                </div>
+
+                <a href="{{ path('app_vehicles') }}">Return to vehicle list</a>
+            </div>
+        {% else %}
+            <li>No vehicles found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

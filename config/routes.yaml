@@ -1,0 +1,12 @@
+# config/routes.yaml
+homepage:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+vehicles_list:
+    path: /vehicles
+    controller: App\Controller\DefaultController::listVehicles
+
+vehicles_show:
+    path: /vehicles/{id}
+    controller: App\Controller\DefaultController::showVehicles
